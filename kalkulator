@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float a, b, hasil;
+    char c,d;
+    do{
+
+    cout << "Masukkan bilangan pertama: ";
+    cin >> a;
+    cout << "Masukkan bilangan kedua: ";
+    cin >> b;
+    cout << "masukkan operasi (+,-,*,/); ";
+    cin >> c;
+
+    if (c == '+'){
+    cout << "hasil dari " << a << " + " << b << " adalah: " << a + b << endl;
+    }
+    else if (c == '-'){
+    cout << "hasil dari " << a << " - " << b << " adalah: " << a - b << endl;}
+    else if (c == '*'){
+    cout << "hasil dari " << a << " * " << b << " adalah: " << a * b << endl;}
+   else if (c == '/') {
+        if (b != 0) {
+            hasil = a / b;
+            cout << "Hasil dari " << a << " / " << b << " adalah: " << hasil << endl;
+        } else {
+            cout << "Tidak terdefinisi (penyebut tidakk boleh 0)" << endl;}
+        
+    }
+cout << "Apakah Anda ingin melakukan perhitungan lain? (y/n): ";
+        cin >> d;
+
+    }while (d == 'y' || d == 'Y'); 
+
+    cout << "Terima kasih telah menggunakan program ini!" << endl;
+
+    return 0;
+}
